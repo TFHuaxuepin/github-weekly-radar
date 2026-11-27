@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GitHub 周榜 · 第 48 周</title>
+<style>
+  :root {
+    --ink:#1a1a1a; --sub:#6b7280; --line:#e8e8ea; --bg:#f7f7f8;
+    --accent:#1554b8; --warm:#c2410c; --card:#fff;
+  }
+  * { box-sizing:border-box; }
+  body {
+    margin:0; padding:0 0 40px; background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC",
+      "Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    font-size:15px; line-height:1.7;
+  }
+  .wrap { max-width:720px; margin:0 auto; padding:0 16px; }
+  header {
+    background:linear-gradient(135deg,#0f3f8f,#1d6ad4); color:#fff;
+    padding:26px 16px 22px; margin-bottom:18px;
+  }
+  header .wrap { padding:0; }
+  header h1 { margin:0 0 6px; font-size:21px; font-weight:600; letter-spacing:.5px; }
+  header .date { font-size:13px; opacity:.86; }
+  .summary {
+    background:var(--card); border-radius:12px; padding:16px 18px;
+    border-left:4px solid var(--accent); margin-bottom:20px;
+    box-shadow:0 1px 3px rgba(0,0,0,.05);
+  }
+  .summary .label { font-size:12px; color:var(--sub); letter-spacing:1px; margin-bottom:6px; }
+  .summary p { margin:0 0 8px; font-size:14.5px; }
+  .summary p:last-child { margin-bottom:0; }
+  .kv { color:var(--accent); font-weight:600; }
+  section { margin-bottom:26px; }
+  h2 {
+    font-size:16px; margin:0 0 12px; padding-left:10px;
+    border-left:3px solid var(--accent); line-height:1.3;
+  }
+  h2 .sub { font-size:12px; color:var(--sub); font-weight:400; margin-left:8px; }
+  .card {
+    display:block; text-decoration:none; color:inherit; background:var(--card);
+    border-radius:10px; padding:13px 15px; margin-bottom:9px;
+    border:1px solid var(--line); transition:border-color .15s, transform .15s;
+  }
+  .card:hover { border-color:var(--accent); transform:translateY(-1px); }
+  .card-top { display:flex; align-items:center; gap:7px; flex-wrap:wrap; margin-bottom:5px; }
+  .idx {
+    display:inline-flex; align-items:center; justify-content:center;
+    min-width:19px; height:19px; border-radius:5px; background:#eef2fa;
+    color:var(--accent); font-size:11.5px; font-weight:700; padding:0 3px;
+  }
+  .name { font-weight:600; font-size:14.5px; word-break:break-all; }
+  .badge.new {
+    font-size:10.5px; background:#fff3e6; color:var(--warm);
+    border-radius:4px; padding:1px 5px;
+  }
+  .tag {
+    font-size:11px; color:var(--sub); background:#f2f3f5;
+    border-radius:4px; padding:1px 6px; margin-left:auto;
+  }
+  .use { font-size:14px; color:#333; margin:2px 0 4px; }
+  .meta { font-size:12px; color:var(--sub); display:flex; gap:12px; align-items:center; }
+  .meta.risk { color:var(--warm); margin-bottom:3px; }
+  .star { color:#b45309; }
+  .score { margin-left:auto; font-weight:700; color:var(--accent); }
+  .picks {
+    background:var(--card); border-radius:12px; padding:16px 18px;
+    border-left:4px solid var(--warm); box-shadow:0 1px 3px rgba(0,0,0,.05);
+  }
+  .picks ol { margin:0; padding-left:20px; }
+  .picks li { margin-bottom:9px; font-size:14px; }
+  .picks li:last-child { margin-bottom:0; }
+  .picks a { color:var(--accent); text-decoration:none; font-weight:600; }
+  .pk-use { display:block; color:#444; font-size:13.5px; margin-top:2px; }
+  footer { text-align:center; font-size:12px; color:var(--sub); margin-top:26px; }
+  .empty { color:var(--sub); font-size:14px; }
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <h1>GitHub 周榜 · 第 48 周</h1>
+  <div class="date">2026年11月27日　A 办公效率 · B 生活娱乐</div>
+</div></header>
+
+<div class="wrap">
+  <div class="summary">
+    <div class="label">本周摘要</div>
+    <p>共筛出 <span class="kv">19</span> 个值得看的项目：
+       办公效率 <span class="kv">10</span> 个，
+       生活娱乐 <span class="kv">9</span> 个。</p>
+    <p>办公方向集中在：Office批量处理 5 个、文档解析OCR 4 个、AI知识库RAG 1 个。</p>
+    <p>生活娱乐方向：生活实用 4、纯娱乐 3、知识兴趣 2。</p>
+    <p style="color:#6b7280;font-size:13px;">
+       筛选方式：按你的工作画像用 AI 逐条判定「能用在哪个具体场景」，相关度低于 65% 不进榜。</p>
+  </div>
+
+  <section><h2>A1 · 新星榜<span class="sub">近 30 天新建，可提前上手</span></h2>
+    <a class="card" href="https://github.com/zhangjing361/wengao-box" target="_blank" rel="noopener">
+      <div class="card-top">
+        <span class="idx">1</span>
+        <span class="name">zhangjing361/wengao-box</span>
+        
+        <span class="tag">Office批量处理</span>
+      </div>
+      <div class="use">把战略规划、月度报告草稿 Markdown 一键转成可编辑 Word 交付</div>
+      <div class="meta risk">注意：浏览器本地运行，复杂表格排版需检查</div>
+      <div class="meta">
+        <span class="star">★ 204</span>
+        <span class="est">估 +52 / 周</span>
+        <span class="score">75.1</span>
+      </div>
+    </a>
+    <a class="card" href="https://github.com/beiwocaishijia/gezhi-sheets" target="_blank" rel="noopener">
+      <div class="card-top">
+        <span class="idx">2</span>
+        <span class="name">beiwocaishijia/gezhi-sheets</span>
+        
+        <span class="tag">Office批量处理</span>
+      </div>
+      <div class="use">用自然语言让 AI 直接处理经营计划与绩效台账表格</div>
+      <div class="meta risk">注意：本地模型配置门槛，复杂表格易出错需复核</div>
+      <div class="meta">
+        <span class="star">★ 605</span>
+        <span class="est">估 +181 / 周</span>
+        <span class="score">69.3</span>
+      </div>
+    </a>
+    <a class="card" href="https://github.com/Timaga/noda-local-ai-notes" target="_blank" rel="noopener">
+      <div class="card-top">
+        <span class="idx">3</span>
+        <span class="name">Timaga/noda-local-ai-notes</span>
+        
+        <span class="tag">AI知识库RAG</span>
+      </div>
+      <div class="use">把 D:\工作 资料库做本地语义检索与知识图谱问答</div>
+      <div class="meta risk">注意：Electron桌面版仅Windows，需下载本地模型</div>
+      <div class="meta">
+        <span class="star">★ 104</span>
+        <span class="est">估 +31 / 周</span>
+        <span class="score">63.8</span>
+      </div>
+    </a></section>
+  <section><h2>A2 · 常青榜<span class="sub">老牌但本周仍活跃，可立刻用</span></h2>
+    <a class="card" href="https://github.com/iOfficeAI/OfficeCLI" target="_blank" rel="noopener">
+      <div class="card-top">
+        <span class="idx">1</span>
+        <span class="name">iOfficeAI/OfficeCLI</span>
+        
+        <span class="tag">Office批量处理</span>
+      </div>
+      <div class="use">让 AI 直接读写 Word/Excel/PPT，批量回填 16 部门绩效目标责任书</div>
+      <div class="meta risk">注意：新兴项目，复杂版式兼容性需先验证</div>
+      <div class="meta">
+        <span class="star">★ 3.4k</span>
+        <span class="est">估 +919 / 周</span>
+        <span class="score">95.0</span>
+      </div>
+    </a>
+    <a class="card" href="https://github.com/hugohe3/ppt-master" target="_blank" rel="noopener">
+      <div class="card-top">
+        <span class="idx">2</span>
+        <span class="name">hugohe3/ppt-master</span>
+        
+        <span class="tag">Office批量处理</span>
+      </div>
+      <div class="use">把经营计划文档自动生成月度运营报告PPT原稿</div>
+      <div class="meta risk">注意：需AI模型接入，版式需再微调</div>
+      <div class="meta">
+        <span class="star">★ 8.1k</span>
+        <span class="est">估 +1603 / 周</span>
+        <span class="score">93.8</span>
+      </div>
+    </a>
+    <a class="card" href="https://github.com/opendatalab/MinerU" target="_blank" rel="noopener">
+      <div class="card-top">
+        <span class="idx">3</span>
+        <span class="name">opendatalab/MinerU</span>
+        
+        <span class="tag">文档解析OCR</span>
+      </div>
+      <div class="use">把研报PDF、扫描件转成Markdown存进资料库</div>
+      <div class="meta risk">注意：需GPU环境，本地部署门槛较高</div>
+      <div class="meta">
+        <span class="star">★ 8.4k</span>
+        <span class="est">估 +590 / 周</span>
+        <span class="score">93.1</span>
+      </div>
+    </a>
+    <a class="card" href="https://github.com/xlwings/xlwings" target="_blank" rel="noopener">
+      <div class="card-top">
+        <span class="idx">4</span>
+        <span class="name">xlwings/xlwings</span>
+        
+        <span class="tag">Office批量处理</span>
+      </div>
+      <div class="use">用 Python 直接读写 Excel，把 16 个部门责任书表格自动回填汇总</div>
+      <div class="meta risk">注意：需装 Excel 与 Python 环境，Windows 下最顺</div>
+      <div class="meta">
+        <span class="star">★ 3437</span>
+        <span class="est">估 +5 / 周</span>
+        <span class="score">90.4</span>
+      </div>
+    </a>
+    <a class="card" href="https://github.com/docling-project/docling" target="_blank" rel="noopener">
+      <div class="card-top">
+        <span class="idx">5</span>
+        <span class="name">docling-project/docling</span>
+        
+        <span class="tag">文档解析OCR</span>
+      </div>
+      <div class="use">把研报PDF、Office文档批量解析成结构化文本入库</div>
+      <div class="meta risk">注意：需本地部署，大文件较慢</div>
+      <div class="meta">
+        <span class="star">★ 7.1k</span>
+        <span class="est">估 +572 / 周</span>
+        <span class="score">90.0</span>
+      </div>
+    </a>
+    <a class="card" href="https://github.com/datalab-to/marker" target="_blank" rel="noopener">
+      <div class="card-top">
+        <span class="idx">6</span>
+        <span class="name">datalab-to/marker</span>
+        
+        <span class="tag">文档解析OCR</span>
+      </div>
+      <div class="use">把外部研报PDF批量转Markdown连同表格存进资料库</div>
+      <div class="meta risk">注意：需GPU较佳，首次运行模型下载大</div>
+      <div class="meta">
+        <span class="star">★ 4.1k</span>
+        <span class="est">估 +256 / 周</span>
+        <span class="score">90.0</span>
+      </div>
+    </a>
+    <a class="card" href="https://github.com/firecrawl/anydoc" target="_blank" rel="noopener">
+      <div class="card-top">
+        <span class="idx">7</span>
+        <span class="name">firecrawl/anydoc</span>
+        
+        <span class="tag">文档解析OCR</span>
+      </div>
+      <div class="use">把研报PDF和红头文件转成Markdown入库</div>
+      <div class="meta risk">注意：多格式转换效果因文件复杂度而异</div>
+      <div class="meta">
+        <span class="star">★ 2.4k</span>
+        <span class="est">估 +1444 / 周</span>
+        <span class="score">90.0</span>
+      </div>
+    </a></section>
+  <section><h2>B · 生活娱乐<span class="sub">工作之外，但真的会用</span></h2>
+    <a class="card" href="https://github.com/Anduin2017/HowToCook" target="_blank" rel="noopener">
+      <div class="card-top">
+        <span class="idx">1</span>
+        <span class="name">Anduin2017/HowToCook</span>
+        
+        <span class="tag">生活实用</span>
+      </div>
+      <div class="use">下班照着做家常菜，菜谱带步骤和用量</div>
+      
+      <div class="meta">
+        <span class="star">★ 10.4k</span>
+        <span class="est">估 +296 / 周</span>
+        <span class="score">89.0</span>
+      </div>
+    </a>
+    <a class="card" href="https://github.com/Stellarium/stellarium" target="_blank" rel="noopener">
+      <div class="card-top">
+        <span class="idx">2</span>
+        <span class="name">Stellarium/stellarium</span>
+        <span class="badge new">新上榜</span>
+        <span class="tag">知识兴趣</span>
+      </div>
+      <div class="use">晚上带孩子在电脑上看实时星空，认星座找行星</div>
+      <div class="meta risk">注意：老电脑可能卡，需显卡支持</div>
+      <div class="meta">
+        <span class="star">★ 1.0k</span>
+        <span class="est">估 +15 / 周</span>
+        <span class="score">85.2</span>
+      </div>
+    </a>
+    <a class="card" href="https://github.com/LorisYounger/VPet" target="_blank" rel="noopener">
+      <div class="card-top">
+        <span class="idx">3</span>
+        <span class="name">LorisYounger/VPet</span>
+        <span class="badge new">新上榜</span>
+        <span class="tag">纯娱乐</span>
+      </div>
+      <div class="use">桌面上养一只会互动的虚拟小宠物解闷</div>
+      <div class="meta risk">注意：仅Windows，需装.NET环境</div>
+      <div class="meta">
+        <span class="star">★ 7306</span>
+        <span class="est">估 +35 / 周</span>
+        <span class="score">83.4</span>
+      </div>
+    </a>
+    <a class="card" href="https://github.com/photoprism/photoprism" target="_blank" rel="noopener">
+      <div class="card-top">
+        <span class="idx">4</span>
+        <span class="name">photoprism/photoprism</span>
+        
+        <span class="tag">生活实用</span>
+      </div>
+      <div class="use">把家里手机旧照片建私有相册按人脸自动归类</div>
+      <div class="meta risk">注意：需自建服务器或NAS，配置较折腾</div>
+      <div class="meta">
+        <span class="star">★ 4.0k</span>
+        <span class="est">估 +87 / 周</span>
+        <span class="score">82.8</span>
+      </div>
+    </a>
+    <a class="card" href="https://github.com/liketrek/TREK" target="_blank" rel="noopener">
+      <div class="card-top">
+        <span class="idx">5</span>
+        <span class="name">liketrek/TREK</span>
+        
+        <span class="tag">生活实用</span>
+      </div>
+      <div class="use">规划全家出游行程，记预算、打包清单和旅行日记</div>
+      <div class="meta risk">注意：自建部署稍麻烦，部分功能需联网</div>
+      <div class="meta">
+        <span class="star">★ 1.6k</span>
+        <span class="est">估 +443 / 周</span>
+        <span class="score">82.8</span>
+      </div>
+    </a>
+    <a class="card" href="https://github.com/pagefaultgames/pokerogue" target="_blank" rel="noopener">
+      <div class="card-top">
+        <span class="idx">6</span>
+        <span class="name">pagefaultgames/pokerogue</span>
+        
+        <span class="tag">纯娱乐</span>
+      </div>
+      <div class="use">通勤路上在浏览器里玩宝可梦风格的肉鸽小游戏</div>
+      <div class="meta risk">注意：英文界面，加载稍慢</div>
+      <div class="meta">
+        <span class="star">★ 5952</span>
+        <span class="est">估 +31 / 周</span>
+        <span class="score">82.8</span>
+      </div>
+    </a>
+    <a class="card" href="https://github.com/Snouzy/workout-cool" target="_blank" rel="noopener">
+      <div class="card-top">
+        <span class="idx">7</span>
+        <span class="name">Snouzy/workout-cool</span>
+        <span class="badge new">新上榜</span>
+        <span class="tag">生活实用</span>
+      </div>
+      <div class="use">给自己排健身计划，记录每次训练和重量变化</div>
+      <div class="meta risk">注意：需自建服务，界面英文</div>
+      <div class="meta">
+        <span class="star">★ 8707</span>
+        <span class="est">估 +114 / 周</span>
+        <span class="score">82.3</span>
+      </div>
+    </a>
+    <a class="card" href="https://github.com/mengxi-ream/read-frog" target="_blank" rel="noopener">
+      <div class="card-top">
+        <span class="idx">8</span>
+        <span class="name">mengxi-ream/read-frog</span>
+        <span class="badge new">新上榜</span>
+        <span class="tag">知识兴趣</span>
+      </div>
+      <div class="use">看外语剧时双语字幕，顺手把生词做成闪卡背</div>
+      <div class="meta risk">注意：浏览器扩展，部分功能依赖 AI 接口</div>
+      <div class="meta">
+        <span class="star">★ 1.1k</span>
+        <span class="est">估 +125 / 周</span>
+        <span class="score">82.1</span>
+      </div>
+    </a>
+    <a class="card" href="https://github.com/ppy/osu" target="_blank" rel="noopener">
+      <div class="card-top">
+        <span class="idx">9</span>
+        <span class="name">ppy/osu</span>
+        <span class="badge new">新上榜</span>
+        <span class="tag">纯娱乐</span>
+      </div>
+      <div class="use">下班打一把节奏点击游戏，跟着音乐点圈圈</div>
+      <div class="meta risk">注意：曲库需自行下载，虚拟曲多</div>
+      <div class="meta">
+        <span class="star">★ 2.0k</span>
+        <span class="est">估 +30 / 周</span>
+        <span class="score">81.3</span>
+      </div>
+    </a></section>
+
+  <div class="picks">
+    <div class="label" style="font-size:12px;color:#6b7280;letter-spacing:1px;margin-bottom:8px;">本周动手建议</div>
+    <ol><li><b>[办公]</b>
+        <a href="https://github.com/iOfficeAI/OfficeCLI" target="_blank" rel="noopener">iOfficeAI/OfficeCLI</a>
+        <span class="pk-use">让 AI 直接读写 Word/Excel/PPT，批量回填 16 部门绩效目标责任书</span></li><li><b>[办公]</b>
+        <a href="https://github.com/hugohe3/ppt-master" target="_blank" rel="noopener">hugohe3/ppt-master</a>
+        <span class="pk-use">把经营计划文档自动生成月度运营报告PPT原稿</span></li><li><b>[生活]</b>
+        <a href="https://github.com/Anduin2017/HowToCook" target="_blank" rel="noopener">Anduin2017/HowToCook</a>
+        <span class="pk-use">下班照着做家常菜，菜谱带步骤和用量</span></li></ol>
+  </div>
+
+  <footer>陈华鑫 · 自动周报｜数据源 GitHub Search API｜分类由 AI 完成后人工抽检</footer>
+</div>
+</body>
+</html>
