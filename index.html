@@ -60,9 +60,17 @@
     font-size:11px; color:var(--sub); background:#f2f3f5;
     border-radius:4px; padding:1px 6px; margin-left:auto;
   }
-  .use { font-size:14px; color:#333; margin:2px 0 4px; }
-  .meta { font-size:12px; color:var(--sub); display:flex; gap:12px; align-items:center; }
-  .meta.risk { color:var(--warm); margin-bottom:3px; }
+  .row { font-size:13.5px; color:#333; margin:3px 0; line-height:1.62; }
+  .row b {
+    display:inline-block; font-weight:600; font-size:11px; color:var(--sub);
+    background:#f2f3f5; border-radius:4px; padding:0 6px; margin-right:7px;
+    vertical-align:1px; letter-spacing:.3px;
+  }
+  .row.use b { color:var(--accent); background:#eef2fa; }
+  .row.risk { color:var(--warm); }
+  .row.risk b { color:var(--warm); background:#fff3e6; }
+  .meta { font-size:12px; color:var(--sub); display:flex; gap:12px; align-items:center;
+          margin-top:8px; padding-top:7px; border-top:1px dashed var(--line); }
   .star { color:#b45309; }
   .score { margin-left:auto; font-weight:700; color:var(--accent); }
   .picks {
@@ -73,7 +81,8 @@
   .picks li { margin-bottom:9px; font-size:14px; }
   .picks li:last-child { margin-bottom:0; }
   .picks a { color:var(--accent); text-decoration:none; font-weight:600; }
-  .pk-use { display:block; color:#444; font-size:13.5px; margin-top:2px; }
+  .pk-what { display:block; color:#666; font-size:13px; margin-top:3px; }
+  .pk-use { display:block; color:#333; font-size:13.5px; margin-top:1px; }
   footer { text-align:center; font-size:12px; color:var(--sub); margin-top:26px; }
   .empty { color:var(--sub); font-size:14px; }
 </style>
@@ -87,11 +96,11 @@
 <div class="wrap">
   <div class="summary">
     <div class="label">本周摘要</div>
-    <p>共筛出 <span class="kv">21</span> 个值得看的项目：
-       办公效率 <span class="kv">12</span> 个，
+    <p>共筛出 <span class="kv">24</span> 个值得看的项目：
+       办公效率 <span class="kv">15</span> 个，
        生活娱乐 <span class="kv">9</span> 个。</p>
-    <p>办公方向集中在：Office批量处理 6 个、文档解析OCR 3 个、AI知识库RAG 2 个、图表脑图生成 1 个。</p>
-    <p>生活娱乐方向：生活实用 5、纯娱乐 3、知识兴趣 1。</p>
+    <p>办公方向集中在：Office批量处理 7 个、文档解析OCR 5 个、AI知识库RAG 1 个、文件批量管理 1 个。</p>
+    <p>生活娱乐方向：纯娱乐 4、生活实用 3、知识兴趣 2。</p>
     <p style="color:#6b7280;font-size:13px;">
        筛选方式：按你的工作画像用 AI 逐条判定「能用在哪个具体场景」，相关度低于 65% 不进榜。</p>
   </div>
@@ -104,72 +113,117 @@
         
         <span class="tag">Office批量处理</span>
       </div>
-      <div class="use">在浏览器里批量编辑 Word 经营计划与 PPT 运营报告，Copilot 直接改文件</div>
-      <div class="meta risk">注意：项目较新，Office 兼容性与稳定性未充分验证</div>
+      <div class="row what"><b>是什么</b>浏览器内运行的开源 Office 编辑器套件，含文档、表格、演示、PDF 五种编辑器，内置 Copilot。</div><div class="row how"><b>怎么用</b>需自行部署服务端，浏览器访问使用；AI 功能需配置模型 API Key。</div><div class="row use"><b>你的用法</b>把月度运营报告 PPT 和经营计划表格在网页端直接改写、批量替换图表，减少本地 Office 反复开合。</div>
+      <div class="row risk"><b>注意</b>自部署成本较高，中文排版与 Excel 复杂公式兼容性需实测</div>
       <div class="meta">
-        <span class="star">★ 4763</span>
-        <span class="est">估 +1428 / 周</span>
-        <span class="score">82.1</span>
+        <span class="star">★ 4771</span>
+        <span class="est">估 +1431 / 周</span>
+        <span class="score">84.0</span>
+      </div>
+    </a>
+    <a class="card" href="https://github.com/p10node/office-engine" target="_blank" rel="noopener">
+      <div class="card-top">
+        <span class="idx">2</span>
+        <span class="name">p10node/office-engine</span>
+        
+        <span class="tag">Office批量处理</span>
+      </div>
+      <div class="row what"><b>是什么</b>浏览器内打开与编辑 DOCX/XLSX/PPTX/CSV 等格式的文档引擎</div><div class="row how"><b>怎么用</b>部署为 Web 服务，浏览器访问即可，无需本机装 Office</div><div class="row use"><b>你的用法</b>无 Office 环境下批量查看修改 16 部门绩效责任书和 PPT 汇报稿</div>
+      <div class="row risk"><b>注意</b>自托管需运维，复杂排版兼容性有限</div>
+      <div class="meta">
+        <span class="star">★ 154</span>
+        <span class="est">估 +44 / 周</span>
+        <span class="score">79.1</span>
+      </div>
+    </a>
+    <a class="card" href="https://github.com/zhangjing361/wengao-box" target="_blank" rel="noopener">
+      <div class="card-top">
+        <span class="idx">3</span>
+        <span class="name">zhangjing361/wengao-box</span>
+        
+        <span class="tag">Office批量处理</span>
+      </div>
+      <div class="row what"><b>是什么</b>浏览器本地把 Markdown 一键转成可编辑 Word 文档的工具，支持中文排版</div><div class="row how"><b>怎么用</b>打开网页即用，纯前端处理不上传文件，无需安装</div><div class="row use"><b>你的用法</b>把公众号简报、经营计划草稿用 Markdown 写好后直接导出 Word 交部门会签</div>
+      <div class="row risk"><b>注意</b>版式能力有限，复杂表格样式仍需人工微调</div>
+      <div class="meta">
+        <span class="star">★ 204</span>
+        <span class="est">估 +52 / 周</span>
+        <span class="score">78.2</span>
       </div>
     </a>
     <a class="card" href="https://github.com/beiwocaishijia/gezhi-sheets" target="_blank" rel="noopener">
       <div class="card-top">
-        <span class="idx">2</span>
+        <span class="idx">4</span>
         <span class="name">beiwocaishijia/gezhi-sheets</span>
         
         <span class="tag">Office批量处理</span>
       </div>
-      <div class="use">用自然语言让本地 AI 表格助手处理 16 部门绩效目标责任书汇总</div>
-      <div class="meta risk">注意：新项目 star 少，数据量大时稳定性待验证</div>
+      <div class="row what"><b>是什么</b>本地 AI 表格助手，用自然语言对表格做查询、生成与处理，支持多家国产大模型。</div><div class="row how"><b>怎么用</b>本地部署，需配置 GLM/Kimi/豆包/DeepSeek/Qwen 的 API Key，浏览器界面操作。</div><div class="row use"><b>你的用法</b>把经营计划表格汇总和绩效台账的口径核对交给它做自然语言取数与字段整理。</div>
+      <div class="row risk"><b>注意</b>依赖外部大模型 API，表格量大时结果准确性需人工复核</div>
       <div class="meta">
         <span class="star">★ 605</span>
         <span class="est">估 +181 / 周</span>
         <span class="score">72.4</span>
       </div>
     </a>
-    <a class="card" href="https://github.com/p10node/office-engine" target="_blank" rel="noopener">
-      <div class="card-top">
-        <span class="idx">3</span>
-        <span class="name">p10node/office-engine</span>
-        
-        <span class="tag">Office批量处理</span>
-      </div>
-      <div class="use">浏览器里打开并编辑 XLSX/DOCX/PPTX，改绩效表与汇报 PPT 免装 Office</div>
-      <div class="meta risk">注意：自托管服务需部署；复杂格式与图表替换能力未验证</div>
-      <div class="meta">
-        <span class="star">★ 154</span>
-        <span class="est">估 +44 / 周</span>
-        <span class="score">71.1</span>
-      </div>
-    </a>
     <a class="card" href="https://github.com/Timaga/noda-local-ai-notes" target="_blank" rel="noopener">
       <div class="card-top">
-        <span class="idx">4</span>
+        <span class="idx">5</span>
         <span class="name">Timaga/noda-local-ai-notes</span>
         
         <span class="tag">AI知识库RAG</span>
       </div>
-      <div class="use">把研报、行业资料建成带知识图谱的本地库，语义检索并带引用回答</div>
-      <div class="meta risk">注意：Windows 桌面应用，大模型本地运行吃显存</div>
+      <div class="row what"><b>是什么</b>Windows 本地优先的 AI 笔记应用，支持 Markdown 笔记、个人知识库、知识图谱、语义搜索与带引用来源的问答。</div><div class="row how"><b>怎么用</b>Electron 桌面安装，本地加载 GGUF 模型，数据存本机。</div><div class="row use"><b>你的用法</b>把 D:\工作 里的研报和行业资料沉淀成本地知识库，按月检索历史材料出汇报口径。</div>
+      <div class="row risk"><b>注意</b>中文语义检索效果依赖所选模型，需一定显卡/内存资源</div>
       <div class="meta">
         <span class="star">★ 104</span>
         <span class="est">估 +31 / 周</span>
-        <span class="score">70.0</span>
+        <span class="score">71.3</span>
       </div>
     </a>
-    <a class="card" href="https://github.com/wangkefan0309-ui/guanlan" target="_blank" rel="noopener">
+    <a class="card" href="https://github.com/zero5122/offline-file-converter-windows" target="_blank" rel="noopener">
       <div class="card-top">
-        <span class="idx">5</span>
-        <span class="name">wangkefan0309-ui/guanlan</span>
+        <span class="idx">6</span>
+        <span class="name">zero5122/offline-file-converter-windows</span>
         
-        <span class="tag">AI知识库RAG</span>
+        <span class="tag">文件批量管理</span>
       </div>
-      <div class="use">在 Obsidian 里管订阅、精读公众号资讯并沉淀到资料库</div>
-      <div class="meta risk">注意：需装 Obsidian 插件，以英文界面为主</div>
+      <div class="row what"><b>是什么</b>Windows 本地离线文件转换器，批量转换 PDF、文档、图片、音视频格式。</div><div class="row how"><b>怎么用</b>下载安装包在 Windows 本机运行，全程离线不联网，有图形界面。</div><div class="row use"><b>你的用法</b>收材料时把 16 个部门交上来的各种格式文件批量转成 PDF/Word 统一归档。</div>
+      <div class="row risk"><b>注意</b>star 少未验证，转换质量尤其是 PDF 版面还原需先试</div>
       <div class="meta">
-        <span class="star">★ 94</span>
-        <span class="est">估 +28 / 周</span>
-        <span class="score">63.5</span>
+        <span class="star">★ 1072</span>
+        <span class="est">估 +321 / 周</span>
+        <span class="score">71.1</span>
+      </div>
+    </a>
+    <a class="card" href="https://github.com/LBEILC/Pane" target="_blank" rel="noopener">
+      <div class="card-top">
+        <span class="idx">7</span>
+        <span class="name">LBEILC/Pane</span>
+        
+        <span class="tag">桌面效率工具</span>
+      </div>
+      <div class="row what"><b>是什么</b>Windows 11 磨砂玻璃风格效率工具，集成启动器、剪贴板历史、鼠标手势与超级面板</div><div class="row how"><b>怎么用</b>Windows 桌面安装即用，本地常驻，无需服务器</div><div class="row use"><b>你的用法</b>用剪贴板历史快速复用绩效责任书里的重复字段，用启动器秒开 D:\工作 下的台账与汇报目录</div>
+      <div class="row risk"><b>注意</b>仅限 Windows 11，项目较新稳定性待观察</div>
+      <div class="meta">
+        <span class="star">★ 188</span>
+        <span class="est">估 +47 / 周</span>
+        <span class="score">69.1</span>
+      </div>
+    </a>
+    <a class="card" href="https://github.com/Muanyan-mjq/zotero-interlinear" target="_blank" rel="noopener">
+      <div class="card-top">
+        <span class="idx">8</span>
+        <span class="name">Muanyan-mjq/zotero-interlinear</span>
+        <span class="badge new">新上榜</span>
+        <span class="tag">文档解析OCR</span>
+      </div>
+      <div class="row what"><b>是什么</b>Zotero 的逐段双语对照阅读插件</div><div class="row how"><b>怎么用</b>装进 Zotero，自带翻译服务接入</div><div class="row use"><b>你的用法</b>读外部研报 PDF 时中英对照，便于快速摘录要点入资料库</div>
+      <div class="row risk"><b>注意</b>依赖 Zotero 与第三方翻译 API</div>
+      <div class="meta">
+        <span class="star">★ 109</span>
+        <span class="est">估 +32 / 周</span>
+        <span class="score">63.0</span>
       </div>
     </a></section>
   <section><h2>A2 · 常青榜<span class="sub">老牌但本周仍活跃，可立刻用</span></h2>
@@ -180,87 +234,87 @@
         
         <span class="tag">Office批量处理</span>
       </div>
-      <div class="use">让 AI 批量读写 16 个部门绩效责任书 Excel 与月度运营 PPT</div>
-      <div class="meta risk">注意：需配合 Agent 使用，PPT 复杂版式可能走样</div>
+      <div class="row what"><b>是什么</b>给AI agent用的Office套件CLI，可读写编辑Word/Excel/PPT</div><div class="row how"><b>怎么用</b>单文件二进制，本地命令行运行，无需安装Office，可由agent调用</div><div class="row use"><b>你的用法</b>批量回填16个部门绩效目标责任书、汇总经营计划表格、替换月度运营报告PPT图表</div>
+      <div class="row risk"><b>注意</b>较新项目，复杂格式与图表替换效果需实测</div>
       <div class="meta">
         <span class="star">★ 3.4k</span>
         <span class="est">估 +919 / 周</span>
         <span class="score">96.9</span>
       </div>
     </a>
-    <a class="card" href="https://github.com/hugohe3/ppt-master" target="_blank" rel="noopener">
+    <a class="card" href="https://github.com/opendatalab/MinerU" target="_blank" rel="noopener">
       <div class="card-top">
         <span class="idx">2</span>
+        <span class="name">opendatalab/MinerU</span>
+        
+        <span class="tag">文档解析OCR</span>
+      </div>
+      <div class="row what"><b>是什么</b>文档解析工具，把 PDF、Office 文档还原成 Markdown/JSON</div><div class="row how"><b>怎么用</b>pip 或 Docker 部署，本地跑，复杂版面需 GPU 提速</div><div class="row use"><b>你的用法</b>外部研报 PDF、扫描红头文件转成结构化文本后入库检索</div>
+      <div class="row risk"><b>注意</b>复杂表格和扫描件需调参，GPU 环境更好</div>
+      <div class="meta">
+        <span class="star">★ 8.4k</span>
+        <span class="est">估 +590 / 周</span>
+        <span class="score">94.3</span>
+      </div>
+    </a>
+    <a class="card" href="https://github.com/hugohe3/ppt-master" target="_blank" rel="noopener">
+      <div class="card-top">
+        <span class="idx">3</span>
         <span class="name">hugohe3/ppt-master</span>
         
         <span class="tag">Office批量处理</span>
       </div>
-      <div class="use">把经营计划文档或主题自动生成月度运营报告PPT，含原生图表和表格</div>
-      <div class="meta risk">注意：生成后仍需人工调整版式；需配置AI模型</div>
+      <div class="row what"><b>是什么</b>AI 把文档或主题生成原生 PowerPoint，含图表、表格与转场动画</div><div class="row how"><b>怎么用</b>本地部署或命令行运行，需接模型 API，输出 pptx 文件</div><div class="row use"><b>你的用法</b>月度运营报告 PPT 的初稿生成与图表替换，减少手工排版时间</div>
+      <div class="row risk"><b>注意</b>生成后仍需人工核对口径与版式</div>
       <div class="meta">
         <span class="star">★ 8.1k</span>
         <span class="est">估 +1603 / 周</span>
         <span class="score">93.8</span>
       </div>
     </a>
-    <a class="card" href="https://github.com/opendatalab/MinerU" target="_blank" rel="noopener">
+    <a class="card" href="https://github.com/xlwings/xlwings" target="_blank" rel="noopener">
       <div class="card-top">
-        <span class="idx">3</span>
-        <span class="name">opendatalab/MinerU</span>
+        <span class="idx">4</span>
+        <span class="name">xlwings/xlwings</span>
+        
+        <span class="tag">Office批量处理</span>
+      </div>
+      <div class="row what"><b>是什么</b>Python 库，实现 Python 与 Excel 双向调用，可脚本化操作工作簿与报表。</div><div class="row how"><b>怎么用</b>pip 安装，Windows 上需装 Excel，脚本本地运行或由 Windows 计划任务定时触发。</div><div class="row use"><b>你的用法</b>写脚本把 16 个部门绩效目标责任书按月批量回填、汇总经营计划表格并自动刷新报表。</div>
+      <div class="row risk"><b>注意</b>需装桌面版 Excel，脚本编写有一定门槛。</div>
+      <div class="meta">
+        <span class="star">★ 3437</span>
+        <span class="est">估 +5 / 周</span>
+        <span class="score">93.5</span>
+      </div>
+    </a>
+    <a class="card" href="https://github.com/ocrmypdf/OCRmyPDF" target="_blank" rel="noopener">
+      <div class="card-top">
+        <span class="idx">5</span>
+        <span class="name">ocrmypdf/OCRmyPDF</span>
         
         <span class="tag">文档解析OCR</span>
       </div>
-      <div class="use">把外部研报PDF、红头扫描件转成Markdown结构化文本再入库检索</div>
-      <div class="meta risk">注意：需本地部署模型，扫描件识别依赖GPU算力</div>
+      <div class="row what"><b>是什么</b>给扫描版PDF加OCR文字层的命令行工具，输出可搜索PDF</div><div class="row how"><b>怎么用</b>本地安装后命令行运行，依赖Tesseract，可批量处理、纯本地</div><div class="row use"><b>你的用法</b>把外部研报和红头文件扫描件批量转成可搜索文本，方便入库检索</div>
+      <div class="row risk"><b>注意</b>中文识别需另装中文语言包，效果弱于MinerU</div>
       <div class="meta">
-        <span class="star">★ 8.4k</span>
-        <span class="est">估 +590 / 周</span>
+        <span class="star">★ 3.5k</span>
+        <span class="est">估 +52 / 周</span>
         <span class="score">93.1</span>
       </div>
     </a>
     <a class="card" href="https://github.com/RapidAI/RapidOCR" target="_blank" rel="noopener">
       <div class="card-top">
-        <span class="idx">4</span>
+        <span class="idx">6</span>
         <span class="name">RapidAI/RapidOCR</span>
         
         <span class="tag">文档解析OCR</span>
       </div>
-      <div class="use">现有 RapidOCR 链路，把红头文件和扫描件转成可编辑文本入库</div>
-      <div class="meta risk">注意：需自行封装脚本与模型下载</div>
+      <div class="row what"><b>是什么</b>多语言 OCR 工具包，基于 ONNX Runtime/OpenVINO/Paddle 等推理后端，可离线识别中英文。</div><div class="row how"><b>怎么用</b>pip 安装后命令行或 Python 调用，模型本地运行，无需联网。</div><div class="row use"><b>你的用法</b>他已经在这条链路上，可直接把扫描版研报、红头文件批量转文本入资料库。</div>
+      
       <div class="meta">
         <span class="star">★ 8638</span>
         <span class="est">估 +28 / 周</span>
         <span class="score">92.6</span>
-      </div>
-    </a>
-    <a class="card" href="https://github.com/xlwings/xlwings" target="_blank" rel="noopener">
-      <div class="card-top">
-        <span class="idx">5</span>
-        <span class="name">xlwings/xlwings</span>
-        
-        <span class="tag">Office批量处理</span>
-      </div>
-      <div class="use">用Python批量读写Excel，把16个部门目标责任书自动汇总回填</div>
-      <div class="meta risk">注意：需装Excel环境，Windows下最稳</div>
-      <div class="meta">
-        <span class="star">★ 3437</span>
-        <span class="est">估 +5 / 周</span>
-        <span class="score">90.4</span>
-      </div>
-    </a>
-    <a class="card" href="https://github.com/mermaid-js/mermaid" target="_blank" rel="noopener">
-      <div class="card-top">
-        <span class="idx">6</span>
-        <span class="name">mermaid-js/mermaid</span>
-        <span class="badge new">新上榜</span>
-        <span class="tag">图表脑图生成</span>
-      </div>
-      <div class="use">用文本直接画战略规划结构图、项目推进图和任务拆解图，贴进经营计划PPT</div>
-      <div class="meta risk">注意：需熟悉Markdown语法，复杂样式需调参</div>
-      <div class="meta">
-        <span class="star">★ 9.1k</span>
-        <span class="est">估 +144 / 周</span>
-        <span class="score">90.2</span>
       </div>
     </a>
     <a class="card" href="https://github.com/docling-project/docling" target="_blank" rel="noopener">
@@ -270,12 +324,12 @@
         
         <span class="tag">文档解析OCR</span>
       </div>
-      <div class="use">把研报PDF和经营计划Word解析成结构化表格与Markdown存入资料库</div>
-      <div class="meta risk">注意：需本地部署模型；复杂版式表格抽取需调优</div>
+      <div class="row what"><b>是什么</b>文档解析库，把 PDF、Word 等转成结构化数据供 AI 使用</div><div class="row how"><b>怎么用</b>pip 装包本地运行，可选 GPU 加速，无网页界面</div><div class="row use"><b>你的用法</b>外部研报和扫描件批量转结构化文本，入库前统一格式</div>
+      <div class="row risk"><b>注意</b>复杂表格版面需调参，依赖模型下载</div>
       <div class="meta">
         <span class="star">★ 7.1k</span>
         <span class="est">估 +572 / 周</span>
-        <span class="score">90.0</span>
+        <span class="score">91.8</span>
       </div>
     </a></section>
   <section><h2>B · 生活娱乐<span class="sub">工作之外，但真的会用</span></h2>
@@ -286,56 +340,56 @@
         
         <span class="tag">生活实用</span>
       </div>
-      <div class="use">周末照着菜谱做家常菜，步骤写得跟写程序一样清楚</div>
+      <div class="row what"><b>是什么</b>一份中文家常菜谱文档集，按菜分文件，含用料和分步做法</div><div class="row how"><b>怎么用</b>纯 Markdown 网页浏览，也可在线访问，不用安装任何程序</div><div class="row use"><b>生活场景</b>周末照着文档做番茄炒蛋、红烧肉，步骤和用量都有，不用再搜菜谱</div>
       
       <div class="meta">
         <span class="star">★ 10.4k</span>
         <span class="est">估 +296 / 周</span>
-        <span class="score">89.0</span>
+        <span class="score">87.1</span>
       </div>
     </a>
-    <a class="card" href="https://github.com/Stellarium/stellarium" target="_blank" rel="noopener">
+    <a class="card" href="https://github.com/LorisYounger/VPet" target="_blank" rel="noopener">
       <div class="card-top">
         <span class="idx">2</span>
-        <span class="name">Stellarium/stellarium</span>
+        <span class="name">LorisYounger/VPet</span>
         
-        <span class="tag">知识兴趣</span>
+        <span class="tag">纯娱乐</span>
       </div>
-      <div class="use">晚上抬头认星空，找星座和行星</div>
+      <div class="row what"><b>是什么</b>开源虚拟桌宠模拟器，养一只会动的二次元小宠物</div><div class="row how"><b>怎么用</b>装 Windows 桌面程序直接运行，宠物趴在屏幕上互动</div><div class="row use"><b>生活场景</b>工作间隙摸摸桌宠喂食，桌面不那么冷清，孩子也爱看</div>
+      <div class="row risk"><b>注意</b>仅 Windows，WPF 依赖</div>
+      <div class="meta">
+        <span class="star">★ 7306</span>
+        <span class="est">估 +35 / 周</span>
+        <span class="score">83.4</span>
+      </div>
+    </a>
+    <a class="card" href="https://github.com/ayangweb/BongoCat" target="_blank" rel="noopener">
+      <div class="card-top">
+        <span class="idx">3</span>
+        <span class="name">ayangweb/BongoCat</span>
+        
+        <span class="tag">纯娱乐</span>
+      </div>
+      <div class="row what"><b>是什么</b>一只会跟着键盘敲击节奏动起来的跨平台桌宠猫</div><div class="row how"><b>怎么用</b>下载安装包装到 Windows/Mac/Linux 桌面即可，纯本地运行</div><div class="row use"><b>生活场景</b>放屏幕上，打字时它跟着敲鼓，闲时逗一逗，纯放松</div>
       
       <div class="meta">
-        <span class="star">★ 1.0k</span>
-        <span class="est">估 +15 / 周</span>
-        <span class="score">85.2</span>
+        <span class="star">★ 2.5k</span>
+        <span class="est">估 +286 / 周</span>
+        <span class="score">83.2</span>
       </div>
     </a>
     <a class="card" href="https://github.com/photoprism/photoprism" target="_blank" rel="noopener">
       <div class="card-top">
-        <span class="idx">3</span>
+        <span class="idx">4</span>
         <span class="name">photoprism/photoprism</span>
         
         <span class="tag">生活实用</span>
       </div>
-      <div class="use">把家里的旧硬盘照片做成私有相册，按人脸和地点自动归堆</div>
-      <div class="meta risk">注意：需要自己搭服务器，家用电脑长期开机</div>
+      <div class="row what"><b>是什么</b>自建的 AI 照片管理服务，自动按人脸和地点归类相册</div><div class="row how"><b>怎么用</b>要 Docker 部署在自己的机器或 NAS 上，配数据库，浏览器访问</div><div class="row use"><b>生活场景</b>把家里旧硬盘里十几年的家庭照片导进去，自动按人脸分好，找孩子小时候的照片很快</div>
+      <div class="row risk"><b>注意</b>需要自建服务并长期开机，人脸识别首次索引较慢</div>
       <div class="meta">
         <span class="star">★ 4.0k</span>
         <span class="est">估 +87 / 周</span>
-        <span class="score">82.8</span>
-      </div>
-    </a>
-    <a class="card" href="https://github.com/super-productivity/super-productivity" target="_blank" rel="noopener">
-      <div class="card-top">
-        <span class="idx">4</span>
-        <span class="name">super-productivity/super-productivity</span>
-        
-        <span class="tag">生活实用</span>
-      </div>
-      <div class="use">做家务和个人待办清单，记录一件件事花的时间</div>
-      <div class="meta risk">注意：功能偏多，初次设置要花点时间</div>
-      <div class="meta">
-        <span class="star">★ 2.4k</span>
-        <span class="est">估 +46 / 周</span>
         <span class="score">82.8</span>
       </div>
     </a>
@@ -346,57 +400,57 @@
         
         <span class="tag">生活实用</span>
       </div>
-      <div class="use">规划全家旅行行程、记预算和打包清单</div>
-      <div class="meta risk">注意：自建部署略麻烦，可先用演示站</div>
+      <div class="row what"><b>是什么</b>开源旅行行程规划器，把行程、预订、预算、行李清单和游记放一起</div><div class="row how"><b>怎么用</b>可自建 Docker 服务，浏览器或手机 PWA 访问，支持离线</div><div class="row use"><b>生活场景</b>全家出游前和伴侣一起排每天行程、记花费、列打包清单，路上离线查看</div>
+      <div class="row risk"><b>注意</b>自建需 Docker，多人协作配置略繁琐</div>
       <div class="meta">
         <span class="star">★ 1.6k</span>
         <span class="est">估 +443 / 周</span>
         <span class="score">82.8</span>
       </div>
     </a>
-    <a class="card" href="https://github.com/hendricius/the-bread-code" target="_blank" rel="noopener">
+    <a class="card" href="https://github.com/pagefaultgames/pokerogue" target="_blank" rel="noopener">
       <div class="card-top">
         <span class="idx">6</span>
-        <span class="name">hendricius/the-bread-code</span>
-        <span class="badge new">新上榜</span>
-        <span class="tag">生活实用</span>
+        <span class="name">pagefaultgames/pokerogue</span>
+        
+        <span class="tag">纯娱乐</span>
       </div>
-      <div class="use">周末照着步骤烤欧包，配方当代码一样写</div>
-      <div class="meta risk">注意：英文为主，需基本烘焙常识</div>
+      <div class="row what"><b>是什么</b>浏览器里的宝可梦同人肉鸽游戏，一路抓宠组队闯关</div><div class="row how"><b>怎么用</b>打开网页即玩，或本地起服务，无需安装</div><div class="row use"><b>生活场景</b>通勤路上在浏览器里刷一局，抓只宝可梦接着下次继续</div>
+      <div class="row risk"><b>注意</b>同人作品，官方随时可能要求下架</div>
       <div class="meta">
-        <span class="star">★ 4146</span>
-        <span class="est">估 +9 / 周</span>
-        <span class="score">81.8</span>
+        <span class="star">★ 5952</span>
+        <span class="est">估 +31 / 周</span>
+        <span class="score">82.8</span>
       </div>
     </a>
-    <a class="card" href="https://github.com/navidrome/navidrome" target="_blank" rel="noopener">
+    <a class="card" href="https://github.com/mengxi-ream/read-frog" target="_blank" rel="noopener">
       <div class="card-top">
         <span class="idx">7</span>
-        <span class="name">navidrome/navidrome</span>
-        <span class="badge new">新上榜</span>
-        <span class="tag">纯娱乐</span>
+        <span class="name">mengxi-ream/read-frog</span>
+        
+        <span class="tag">知识兴趣</span>
       </div>
-      <div class="use">把自己收藏的音乐做成私人流媒体，手机在家随时听</div>
-      <div class="meta risk">注意：需要自建服务器和整理曲库</div>
+      <div class="row what"><b>是什么</b>浏览器扩展，边看网页双语翻译边把生词做成闪卡</div><div class="row how"><b>怎么用</b>装浏览器插件，配 AI 接口，边看边存词</div><div class="row use"><b>生活场景</b>看英文文章和追剧字幕时顺带记单词，睡前复习闪卡</div>
+      <div class="row risk"><b>注意</b>部分功能需配 AI API Key</div>
       <div class="meta">
-        <span class="star">★ 2.5k</span>
-        <span class="est">估 +44 / 周</span>
-        <span class="score">81.3</span>
+        <span class="star">★ 1.1k</span>
+        <span class="est">估 +125 / 周</span>
+        <span class="score">82.1</span>
       </div>
     </a>
-    <a class="card" href="https://github.com/ayangweb/BongoCat" target="_blank" rel="noopener">
+    <a class="card" href="https://github.com/Stellarium/stellarium" target="_blank" rel="noopener">
       <div class="card-top">
         <span class="idx">8</span>
-        <span class="name">ayangweb/BongoCat</span>
-        <span class="badge new">新上榜</span>
-        <span class="tag">纯娱乐</span>
+        <span class="name">Stellarium/stellarium</span>
+        
+        <span class="tag">知识兴趣</span>
       </div>
-      <div class="use">桌面上养只会跟着敲键盘的猫，纯图一乐</div>
-      
+      <div class="row what"><b>是什么</b>开源星象仪软件，实时渲染真实星空和行星位置</div><div class="row how"><b>怎么用</b>下载安装桌面程序，纯本地，无需联网</div><div class="row use"><b>生活场景</b>晚上带孩子认星座看月亮，或自己抬头对着天空找北斗七星</div>
+      <div class="row risk"><b>注意</b>界面功能多需摸索，配置低的机器略卡</div>
       <div class="meta">
-        <span class="star">★ 2.5k</span>
-        <span class="est">估 +286 / 周</span>
-        <span class="score">81.3</span>
+        <span class="star">★ 1.0k</span>
+        <span class="est">估 +15 / 周</span>
+        <span class="score">82.1</span>
       </div>
     </a>
     <a class="card" href="https://github.com/ppy/osu" target="_blank" rel="noopener">
@@ -406,12 +460,12 @@
         
         <span class="tag">纯娱乐</span>
       </div>
-      <div class="use">下载节奏游戏，下班敲两把音乐点按放松</div>
-      <div class="meta risk">注意：曲库和皮肤需自行下载</div>
+      <div class="row what"><b>是什么</b>经典免费音乐节奏游戏 osu!，跟着节拍点圈敲击</div><div class="row how"><b>怎么用</b>下载桌面客户端安装，注册账号后联网下载谱面</div><div class="row use"><b>生活场景</b>下班后玩几局节奏图，听歌和手速一起练，很解压</div>
+      <div class="row risk"><b>注意</b>需要注册账号，曲谱质量依赖社区</div>
       <div class="meta">
         <span class="star">★ 2.0k</span>
         <span class="est">估 +30 / 周</span>
-        <span class="score">81.3</span>
+        <span class="score">82.0</span>
       </div>
     </a></section>
 
@@ -419,11 +473,14 @@
     <div class="label" style="font-size:12px;color:#6b7280;letter-spacing:1px;margin-bottom:8px;">本周动手建议</div>
     <ol><li><b>[办公]</b>
         <a href="https://github.com/iOfficeAI/OfficeCLI" target="_blank" rel="noopener">iOfficeAI/OfficeCLI</a>
-        <span class="pk-use">让 AI 批量读写 16 个部门绩效责任书 Excel 与月度运营 PPT</span></li><li><b>[办公]</b>
-        <a href="https://github.com/hugohe3/ppt-master" target="_blank" rel="noopener">hugohe3/ppt-master</a>
-        <span class="pk-use">把经营计划文档或主题自动生成月度运营报告PPT，含原生图表和表格</span></li><li><b>[生活]</b>
+        <span class="pk-what">给AI agent用的Office套件CLI，可读写编辑Word/Excel/PPT</span>
+        <span class="pk-use">→ 批量回填16个部门绩效目标责任书、汇总经营计划表格、替换月度运营报告PPT图表</span></li><li><b>[办公]</b>
+        <a href="https://github.com/opendatalab/MinerU" target="_blank" rel="noopener">opendatalab/MinerU</a>
+        <span class="pk-what">文档解析工具，把 PDF、Office 文档还原成 Markdown/JSON</span>
+        <span class="pk-use">→ 外部研报 PDF、扫描红头文件转成结构化文本后入库检索</span></li><li><b>[生活]</b>
         <a href="https://github.com/Anduin2017/HowToCook" target="_blank" rel="noopener">Anduin2017/HowToCook</a>
-        <span class="pk-use">周末照着菜谱做家常菜，步骤写得跟写程序一样清楚</span></li></ol>
+        <span class="pk-what">一份中文家常菜谱文档集，按菜分文件，含用料和分步做法</span>
+        <span class="pk-use">→ 周末照着文档做番茄炒蛋、红烧肉，步骤和用量都有，不用再搜菜谱</span></li></ol>
   </div>
 
   <footer>陈华鑫 · 自动周报｜数据源 GitHub Search API｜分类由 AI 完成后人工抽检</footer>
