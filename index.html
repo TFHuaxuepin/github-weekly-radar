@@ -96,45 +96,105 @@
 <div class="wrap">
   <div class="summary">
     <div class="label">本周摘要</div>
-    <p>共筛出 <span class="kv">17</span> 个值得看的项目：
-       办公效率 <span class="kv">8</span> 个，
+    <p>共筛出 <span class="kv">21</span> 个值得看的项目：
+       办公效率 <span class="kv">12</span> 个，
        生活娱乐 <span class="kv">9</span> 个。</p>
-    <p>办公方向集中在：Agent工作流编排 4 个、钉钉生态自动化 4 个。</p>
+    <p>办公方向集中在：Agent工作流编排 4 个、Office文档生成管线 2 个、跨部门任务追踪 2 个、钉钉生态自动化 2 个。</p>
     <p>生活娱乐方向：纯娱乐休闲 5、生活实用工具 4。</p>
     <p style="color:#6b7280;font-size:13px;">
        筛选方式：按你的工作画像用 AI 逐条判定「能用在哪个具体场景」，相关度低于 65% 不进榜。</p>
   </div>
 
   <section><h2>A1 · 新星榜<span class="sub">近 30 天新建，可提前上手</span></h2>
-    <a class="card" href="https://github.com/YT-Proteus-bot/MineAgent" target="_blank" rel="noopener">
+    <a class="card" href="https://github.com/zhangjing361/wengao-box" target="_blank" rel="noopener">
       <div class="card-top">
         <span class="idx">1</span>
+        <span class="name">zhangjing361/wengao-box</span>
+        
+        <span class="tag">Office文档生成管线</span>
+      </div>
+      <div class="row what"><b>是什么</b>把 Markdown 一键转成可编辑 Word 的浏览器本地工具，针对中文排版做了适配。</div><div class="row how"><b>怎么用</b>浏览器本地处理不上传，打开网页即可用，无需安装与账号。</div><div class="row use"><b>你的用法</b>年度经营计划、月度运营报告先在 Markdown 里定稿内容再一键出 Word，改版式不再反复排版，缓解「内容定稿前动版式」的返工；但批量套版与版式校验仍缺。</div>
+      <div class="row risk"><b>注意</b>单文件转换，16 个部门批量复用模板需人工逐个转。</div>
+      <div class="meta">
+        <span class="star">★ 204</span>
+        <span class="est">估 +51 / 周</span>
+        <span class="score">68.4</span>
+      </div>
+    </a>
+    <a class="card" href="https://github.com/Timaga/noda-local-ai-notes" target="_blank" rel="noopener">
+      <div class="card-top">
+        <span class="idx">2</span>
+        <span class="name">Timaga/noda-local-ai-notes</span>
+        
+        <span class="tag">本地语义检索</span>
+      </div>
+      <div class="row what"><b>是什么</b>Windows 本地优先 AI 笔记应用，Markdown 笔记+知识图谱+语义检索+带引用来源问答</div><div class="row how"><b>怎么用</b>桌面 Electron 应用本地装，模型走本地 gguf，不联网</div><div class="row use"><b>你的用法</b>直接在本地查 D:\工作 资料，问「恒逸自产比例」这类换个说法的问题也能带出引用出处，省去翻目录再读一遍</div>
+      <div class="row risk"><b>注意</b>Windows 桌面端，万级文件索引性能需实测</div>
+      <div class="meta">
+        <span class="star">★ 103</span>
+        <span class="est">估 +30 / 周</span>
+        <span class="score">67.1</span>
+      </div>
+    </a>
+    <a class="card" href="https://github.com/usetuff/tuff" target="_blank" rel="noopener">
+      <div class="card-top">
+        <span class="idx">3</span>
+        <span class="name">usetuff/tuff</span>
+        
+        <span class="tag">跨部门任务追踪</span>
+      </div>
+      <div class="row what"><b>是什么</b>自托管的团队协作平台（Linear/ClickUp 替代品），把任务、文档、聊天与人+AI Agent 协作放在一处。</div><div class="row how"><b>怎么用</b>Docker 自建服务，浏览器访问，需数据库与长期维护。</div><div class="row use"><b>你的用法</b>把 16 个考核主体的重点任务管理、基本功课题、降本增效五条线做成统一任务台账和进度看板，超期项有了全局视图不再挨个问；但催办仍需自己接钉钉通知。</div>
+      <div class="row risk"><b>注意</b>自建运维成本高，与现有钉钉主通道割裂，需评估是否要双系统并行。</div>
+      <div class="meta">
+        <span class="star">★ 218</span>
+        <span class="est">估 +65 / 周</span>
+        <span class="score">66.9</span>
+      </div>
+    </a>
+    <a class="card" href="https://github.com/YT-Proteus-bot/MineAgent" target="_blank" rel="noopener">
+      <div class="card-top">
+        <span class="idx">4</span>
         <span class="name">YT-Proteus-bot/MineAgent</span>
         
         <span class="tag">Agent工作流编排</span>
       </div>
-      <div class="row what"><b>是什么</b>浏览器画布上拖节点搭 Agent 流程、保存即编译成独立 Python 项目的可视化编排器。</div><div class="row how"><b>怎么用</b>浏览器打开画布搭建，点运行在本机真实执行并流式回传每步。</div><div class="row use"><b>你的用法</b>可把行情抓取→清洗→入库→出简报固化成无人值守流程，不必每次手写脚本配定时。</div>
-      <div class="row risk"><b>注意</b>中文项目但成熟度未验证，复杂异常处理需自行补。</div>
+      <div class="row what"><b>是什么</b>浏览器画布式的可视化 Agent 工作流搭建工具，把画布编译成独立 Python Agent 项目</div><div class="row how"><b>怎么用</b>浏览器里拖节点连线配模型，保存后生成 Python 项目本地运行</div><div class="row use"><b>你的用法</b>能可视化搭建 AI 赛马榜流程编排，但复杂取数与核对判断仍需写 Python 代码，相对现有 WorkBuddy 脚本多出的是画布展示与架构图生成</div>
+      <div class="row risk"><b>注意</b>项目较新未大规模验证，生成工程需自行调试</div>
       <div class="meta">
-        <span class="star">★ 170</span>
-        <span class="est">估 +51 / 周</span>
-        <span class="score">67.6</span>
+        <span class="star">★ 134</span>
+        <span class="est">估 +40 / 周</span>
+        <span class="score">63.7</span>
+      </div>
+    </a>
+    <a class="card" href="https://github.com/chiang21fcb/hygieia" target="_blank" rel="noopener">
+      <div class="card-top">
+        <span class="idx">5</span>
+        <span class="name">chiang21fcb/hygieia</span>
+        
+        <span class="tag">口径治理核对</span>
+      </div>
+      <div class="row what"><b>是什么</b>离线检查与压测现有语义层/数据契约的工具，输出数据质量结论</div><div class="row how"><b>怎么用</b>CLI 本地离线运行，针对已有语义层配置</div><div class="row use"><b>你的用法</b>可用来给指标口径和语义层做体检，辅助发现同一指标多种算法的冲突，但需先有语义层定义</div>
+      <div class="row risk"><b>注意</b>要求已有语义层配置，纯英文，门槛偏高</div>
+      <div class="meta">
+        <span class="star">★ 107</span>
+        <span class="est">估 +32 / 周</span>
+        <span class="score">62.3</span>
       </div>
     </a></section>
   <section><h2>A2 · 常青榜<span class="sub">老牌但本周仍活跃，可立刻用</span></h2>
-    <a class="card" href="https://github.com/langbot-app/LangBot" target="_blank" rel="noopener">
+    <a class="card" href="https://github.com/DingTalk-Real-AI/dingtalk-workspace-cli" target="_blank" rel="noopener">
       <div class="card-top">
         <span class="idx">1</span>
-        <span class="name">langbot-app/LangBot</span>
+        <span class="name">DingTalk-Real-AI/dingtalk-workspace-cli</span>
         
         <span class="tag">钉钉生态自动化</span>
       </div>
-      <div class="row what"><b>是什么</b>生产级多平台 IM 机器人开发平台，含 Agent、知识库与插件编排，支持钉钉</div><div class="row how"><b>怎么用</b>需 Docker 自建服务，配置钉钉等平台凭证与模型 API，网页后台管理</div><div class="row use"><b>你的用法</b>16 个部门绩效责任书催办、重点任务滞后预警可由钉钉机器人自动发并跟踪回执</div>
-      <div class="row risk"><b>注意</b>需自建服务与钉钉应用权限配置，有一定部署门槛</div>
+      <div class="row what"><b>是什么</b>钉钉官方开源的跨平台 CLI，把钉钉全套产品能力封装成命令行</div><div class="row how"><b>怎么用</b>安装 CLI，配置钉钉应用凭证后终端调用，可脚本化</div><div class="row use"><b>你的用法</b>可直接脚本化读取 AI 表格、发群通知、查审批状态，让 16 个部门绩效责任书催办与重点任务滞后预警不用人翻表盯；与他现有 WorkBuddy 脚本链路能直接接</div>
+      <div class="row risk"><b>注意</b>需钉钉开放平台应用授权配置，部分接口权限要申请</div>
       <div class="meta">
-        <span class="star">★ 1.9k</span>
-        <span class="est">估 +92 / 周</span>
-        <span class="score">90.7</span>
+        <span class="star">★ 4199</span>
+        <span class="est">估 +116 / 周</span>
+        <span class="score">87.9</span>
       </div>
     </a>
     <a class="card" href="https://github.com/n8n-io/n8n" target="_blank" rel="noopener">
@@ -144,87 +204,87 @@
         
         <span class="tag">Agent工作流编排</span>
       </div>
-      <div class="row what"><b>是什么</b>可视化工作流自动化平台，偏系统间取数搬运与定时触发，内置 400+ 集成与自定义代码节点</div><div class="row how"><b>怎么用</b>Docker 或云托管部署，浏览器拖拽编排，可接钉钉、HTTP 与数据库</div><div class="row use"><b>你的用法</b>把各表滞后项检测、催办消息发送、汇总入库串成定时流水线，16 个部门绩效责任书回收不用人工翻表催</div>
-      <div class="row risk"><b>注意</b>需自建服务并维护，钉钉节点需自行接开放平台接口</div>
+      <div class="row what"><b>是什么</b>节点式工作流自动化平台，偏系统间取数搬运与 API 集成，400+ 集成含可视化编排</div><div class="row how"><b>怎么用</b>自建需 Docker + 数据库，或直接用云版；浏览器拖拽节点，支持自写代码节点</div><div class="row use"><b>你的用法</b>重点任务管理滞后预警、绩效责任书回收催办这类定时取数推送，可换成可视化编排且带执行历史与失败重试；但钉钉 AI 表格节点需自己封 API，复杂判断仍要写脚本</div>
+      <div class="row risk"><b>注意</b>要重写现有脚本到工作流，钉钉 AI 表格无官方节点需自适配</div>
       <div class="meta">
         <span class="star">★ 21.2k</span>
         <span class="est">估 +547 / 周</span>
-        <span class="score">90.0</span>
+        <span class="score">85.6</span>
       </div>
     </a>
-    <a class="card" href="https://github.com/activepieces/activepieces" target="_blank" rel="noopener">
+    <a class="card" href="https://github.com/langbot-app/LangBot" target="_blank" rel="noopener">
       <div class="card-top">
         <span class="idx">3</span>
-        <span class="name">activepieces/activepieces</span>
+        <span class="name">langbot-app/LangBot</span>
         
-        <span class="tag">Agent工作流编排</span>
+        <span class="tag">钉钉生态自动化</span>
       </div>
-      <div class="row what"><b>是什么</b>开源工作流自动化平台，偏系统间取数搬运和AI Agent编排，内置约400个MCP连接器</div><div class="row how"><b>怎么用</b>需Docker自建服务，浏览器里拖拽搭建流程，可接AI模型API</div><div class="row use"><b>你的用法</b>把重点任务管理的滞后检测、催办发钉钉、结果汇总串成一条无人值守流水线，不用你每天翻表盯人</div>
-      <div class="row risk"><b>注意</b>需自建服务器，钉钉连接器要自己配，学习曲线中等</div>
-      <div class="meta">
-        <span class="star">★ 2.6k</span>
-        <span class="est">估 +123 / 周</span>
-        <span class="score">90.0</span>
-      </div>
-    </a>
-    <a class="card" href="https://github.com/windmill-labs/windmill" target="_blank" rel="noopener">
-      <div class="card-top">
-        <span class="idx">4</span>
-        <span class="name">windmill-labs/windmill</span>
-        
-        <span class="tag">Agent工作流编排</span>
-      </div>
-      <div class="row what"><b>是什么</b>代码优先的工作流与应用编排平台，偏系统间取数搬运与定时任务</div><div class="row how"><b>怎么用</b>Docker 自建，配数据库，网页界面编排脚本与流程</div><div class="row use"><b>你的用法</b>把行情抓取→清洗→入库→出简报、以及多表数据汇总定时跑，不用人工盯点</div>
-      <div class="row risk"><b>注意</b>需自建服务并写少量代码，学习曲线中等</div>
+      <div class="row what"><b>是什么</b>多平台 IM 智能机器人开发平台，含钉钉/企微/飞书官方接入与插件编排。</div><div class="row how"><b>怎么用</b>需自建服务（Docker + 数据库），浏览器配机器人，接各平台凭据。</div><div class="row use"><b>你的用法</b>可在钉钉群挂催办机器人，绩效责任书未填、课题评审滞后自动@责任人，减少逐个发消息盯回执；复杂判断仍得写插件。</div>
+      <div class="row risk"><b>注意</b>需自建服务与钉钉应用配置，运维成本中等</div>
       <div class="meta">
         <span class="star">★ 1.9k</span>
-        <span class="est">估 +78 / 周</span>
-        <span class="score">90.0</span>
+        <span class="est">估 +92 / 周</span>
+        <span class="score">84.5</span>
       </div>
     </a>
-    <a class="card" href="https://github.com/DingTalk-Real-AI/dingtalk-workspace-cli" target="_blank" rel="noopener">
+    <a class="card" href="https://github.com/apache/airflow" target="_blank" rel="noopener">
+      <div class="card-top">
+        <span class="idx">4</span>
+        <span class="name">apache/airflow</span>
+        
+        <span class="tag">Agent工作流编排</span>
+      </div>
+      <div class="row what"><b>是什么</b>代码定义 DAG 的任务调度平台，偏系统间批量作业编排与运维监控</div><div class="row how"><b>怎么用</b>需自建调度服务+元数据库，Python 写 DAG，浏览器看运行状态与重跑</div><div class="row use"><b>你的用法</b>把行情抓取→清洗→入库→出简报、月度运营报告取数这类链路固化成定时 DAG，执行历史可查、失败可重跑，不用再靠脚本裸跑</div>
+      <div class="row risk"><b>注意</b>重，单机跑要维护元数据库；钉钉节点没有现成的，推送还得写代码</div>
+      <div class="meta">
+        <span class="star">★ 4.8k</span>
+        <span class="est">估 +78 / 周</span>
+        <span class="score">83.8</span>
+      </div>
+    </a>
+    <a class="card" href="https://github.com/dolanmiu/docx" target="_blank" rel="noopener">
       <div class="card-top">
         <span class="idx">5</span>
-        <span class="name">DingTalk-Real-AI/dingtalk-workspace-cli</span>
+        <span class="name">dolanmiu/docx</span>
         
-        <span class="tag">钉钉生态自动化</span>
+        <span class="tag">Office文档生成管线</span>
       </div>
-      <div class="row what"><b>是什么</b>钉钉官方开源的跨平台 CLI，把钉钉全套产品能力收敛到一个命令行包里</div><div class="row how"><b>怎么用</b>装 CLI 后用钉钉凭据登录，脚本化调用表格、审批、群、日程等接口</div><div class="row use"><b>你的用法</b>绩效责任书催办、重点任务滞后预警、AI 赛马榜进度汇总都能写成脚本定时跑，不用人工翻表发消息</div>
-      <div class="row risk"><b>注意</b>需钉钉管理员授权与凭据配置，官方项目但较新</div>
+      <div class="row what"><b>是什么</b>JS/TS 库，用声明式 API 生成和修改 .docx 文件</div><div class="row how"><b>怎么用</b>npm 安装后在 Node 或浏览器里跑，代码调 API 输出 Word</div><div class="row use"><b>你的用法</b>缓解痛点4：把绩效目标责任书的内容层改成数据+模板，16 个部门套版自动出 Word，不用手工复制改格式</div>
+      <div class="row risk"><b>注意</b>需写 JS，复杂版式（跨页表头）仍需自行处理</div>
       <div class="meta">
-        <span class="star">★ 4196</span>
-        <span class="est">估 +117 / 周</span>
-        <span class="score">87.9</span>
+        <span class="star">★ 6018</span>
+        <span class="est">估 +10 / 周</span>
+        <span class="score">83.6</span>
       </div>
     </a>
-    <a class="card" href="https://github.com/czlonkowski/n8n-mcp" target="_blank" rel="noopener">
+    <a class="card" href="https://github.com/langgenius/dify" target="_blank" rel="noopener">
       <div class="card-top">
         <span class="idx">6</span>
-        <span class="name">czlonkowski/n8n-mcp</span>
+        <span class="name">langgenius/dify</span>
         
-        <span class="tag">钉钉生态自动化</span>
+        <span class="tag">Agent工作流编排</span>
       </div>
-      <div class="row what"><b>是什么</b>MCP服务器，让AI助手直接操作n8n实例：调试、编辑、验证、构建工作流</div><div class="row how"><b>怎么用</b>需已有n8n实例，配MCP客户端（Claude/Cursor）连上即可用</div><div class="row use"><b>你的用法</b>用自然语言让AI帮你改钉钉催办流程、修审批流编排里的报错，不用自己啃节点文档</div>
-      <div class="row risk"><b>注意</b>强依赖n8n，未用n8n则无价值</div>
+      <div class="row what"><b>是什么</b>Agentic 工作流与 RAG 平台，可视化编排 + 知识库 + 多模型，偏内容 AI 加工与问答</div><div class="row how"><b>怎么用</b>Docker 自托管或云版，浏览器画布编排，接各种模型 API</div><div class="row use"><b>你的用法</b>研报入库后出月度运营报告初稿、AI 赛马榜材料加工可放进去做，带执行日志；但钉钉审批流与自动催办没有现成节点，得自己写工具</div>
+      <div class="row risk"><b>注意</b>自托管资源要求高，钉钉侧仍需自研接入</div>
       <div class="meta">
-        <span class="star">★ 2.3k</span>
-        <span class="est">估 +303 / 周</span>
-        <span class="score">87.6</span>
+        <span class="star">★ 16.2k</span>
+        <span class="est">估 +855 / 周</span>
+        <span class="score">83.2</span>
       </div>
     </a>
-    <a class="card" href="https://github.com/chenhg5/cc-connect" target="_blank" rel="noopener">
+    <a class="card" href="https://github.com/makeplane/plane" target="_blank" rel="noopener">
       <div class="card-top">
         <span class="idx">7</span>
-        <span class="name">chenhg5/cc-connect</span>
-        <span class="badge new">新上榜</span>
-        <span class="tag">钉钉生态自动化</span>
+        <span class="name">makeplane/plane</span>
+        
+        <span class="tag">跨部门任务追踪</span>
       </div>
-      <div class="row what"><b>是什么</b>把本地 AI 编程 Agent 桥接到钉钉/飞书等消息平台的连接器</div><div class="row how"><b>怎么用</b>本地运行需配置各平台机器人凭证与 Agent 环境</div><div class="row use"><b>你的用法</b>可在钉钉群里直接触发任务执行，催办与汇总动作发起不用切工具</div>
-      <div class="row risk"><b>注意</b>偏开发者工具，需配置机器人权限，非成品业务系统</div>
+      <div class="row what"><b>是什么</b>Plane，开源项目管理平台，替代Jira/ClickUp，含任务、周期、看板、甘特与分组</div><div class="row how"><b>怎么用</b>Docker部署+数据库，浏览器访问，多人在线协作</div><div class="row use"><b>你的用法</b>16个考核主体的重点任务管理和基本功课题可以建成统一台账，谁欠着什么打开看板就看到，不用挨个问进度</div>
+      <div class="row risk"><b>注意</b>需自建服务器，导入与制度配套要花时间</div>
       <div class="meta">
-        <span class="star">★ 1.7k</span>
-        <span class="est">估 +424 / 周</span>
-        <span class="score">87.6</span>
+        <span class="star">★ 6.3k</span>
+        <span class="est">估 +301 / 周</span>
+        <span class="score">82.3</span>
       </div>
     </a></section>
   <section><h2>B · 生活娱乐<span class="sub">工作之外，但真的会用</span></h2>
@@ -235,147 +295,147 @@
         
         <span class="tag">生活实用工具</span>
       </div>
-      <div class="row what"><b>是什么</b>一份中文家常菜菜谱合集，按菜分类给出用料和分步做法。</div><div class="row how"><b>怎么用</b>纯网页/文档浏览，不需要安装任何软件，打开就能看。</div><div class="row use"><b>生活场景</b>周末照着挑一道菜买料下厨，新手也能按步骤做出家常菜。</div>
-      
+      <div class="row what"><b>是什么</b>一本程序员写的家常菜谱，按菜系和难度分类的图文做法</div><div class="row how"><b>怎么用</b>网页或本地 Markdown 打开，纯文字步骤，不用装环境</div><div class="row use"><b>生活场景</b>下班回家照着做一道西红柿炒蛋或红烧肉，按步骤翻着做</div>
+      <div class="row risk"><b>注意</b>步骤偏文字，没有成品配图参照</div>
       <div class="meta">
         <span class="star">★ 10.4k</span>
         <span class="est">估 +296 / 周</span>
-        <span class="score">87.0</span>
-      </div>
-    </a>
-    <a class="card" href="https://github.com/EstrellaXD/Auto_Bangumi" target="_blank" rel="noopener">
-      <div class="card-top">
-        <span class="idx">2</span>
-        <span class="name">EstrellaXD/Auto_Bangumi</span>
-        
-        <span class="tag">纯娱乐休闲</span>
-      </div>
-      <div class="row what"><b>是什么</b>全自动追番工具，自动订阅、下载、整理番剧</div><div class="row how"><b>怎么用</b>Docker 起一个服务，配好订阅源和下载器，浏览器管理</div><div class="row use"><b>生活场景</b>新番开播自动下载好，周末直接连着看不用自己找资源</div>
-      <div class="row risk"><b>注意</b>需自备服务器和下载器，配置略繁</div>
-      <div class="meta">
-        <span class="star">★ 8334</span>
-        <span class="est">估 +34 / 周</span>
-        <span class="score">83.3</span>
-      </div>
-    </a>
-    <a class="card" href="https://github.com/photoprism/photoprism" target="_blank" rel="noopener">
-      <div class="card-top">
-        <span class="idx">3</span>
-        <span class="name">photoprism/photoprism</span>
-        
-        <span class="tag">生活实用工具</span>
-      </div>
-      <div class="row what"><b>是什么</b>自建的照片管理服务，用 AI 自动给人脸和内容分类整理相册。</div><div class="row how"><b>怎么用</b>需用 Docker 部署在自家电脑或 NAS 上，浏览器访问，图片全留本地。</div><div class="row use"><b>生活场景</b>把家里散在硬盘和手机里的旧照片汇进一个库，按人脸和地点翻出来看。</div>
-      <div class="row risk"><b>注意</b>需要自建服务并准备一定存储空间，首次导入与建索引较慢。</div>
-      <div class="meta">
-        <span class="star">★ 4.0k</span>
-        <span class="est">估 +87 / 周</span>
-        <span class="score">82.7</span>
-      </div>
-    </a>
-    <a class="card" href="https://github.com/navidrome/navidrome" target="_blank" rel="noopener">
-      <div class="card-top">
-        <span class="idx">4</span>
-        <span class="name">navidrome/navidrome</span>
-        
-        <span class="tag">纯娱乐休闲</span>
-      </div>
-      <div class="row what"><b>是什么</b>自建的个人音乐流媒体服务，把本地曲库变成自己的在线音乐站。</div><div class="row how"><b>怎么用</b>需要 Docker 或二进制起服务指向本地音乐目录，浏览器或 App 播放。</div><div class="row use"><b>生活场景</b>把收藏的歌曲放在家里的旧电脑上，手机随时连回家听自己的歌单。</div>
-      <div class="row risk"><b>注意</b>需要自建服务和整理好本地曲库。</div>
-      <div class="meta">
-        <span class="star">★ 2.5k</span>
-        <span class="est">估 +44 / 周</span>
-        <span class="score">82.7</span>
-      </div>
-    </a>
-    <a class="card" href="https://github.com/open-ani/animeko" target="_blank" rel="noopener">
-      <div class="card-top">
-        <span class="idx">5</span>
-        <span class="name">open-ani/animeko</span>
-        
-        <span class="tag">纯娱乐休闲</span>
-      </div>
-      <div class="row what"><b>是什么</b>一站式追番平台，能找番、追番、看番并带弹幕和云收藏同步。</div><div class="row how"><b>怎么用</b>装手机或平板 App，可离线缓存并同步收藏记录。</div><div class="row use"><b>生活场景</b>晚上躺床上追新番，弹幕过滤干净，没网时看缓存的集数。</div>
-      <div class="row risk"><b>注意</b>部分功能依赖第三方站点，需自行配置。</div>
-      <div class="meta">
-        <span class="star">★ 2.2k</span>
-        <span class="est">估 +98 / 周</span>
-        <span class="score">82.7</span>
-      </div>
-    </a>
-    <a class="card" href="https://github.com/ppy/osu" target="_blank" rel="noopener">
-      <div class="card-top">
-        <span class="idx">6</span>
-        <span class="name">ppy/osu</span>
-        
-        <span class="tag">纯娱乐休闲</span>
-      </div>
-      <div class="row what"><b>是什么</b>开源音乐节奏游戏，跟着节拍点按击打判定。</div><div class="row how"><b>怎么用</b>免费下载客户端，注册账号后在线下载曲谱。</div><div class="row use"><b>生活场景</b>周末晚上戴上耳机打几盘节奏谱，练手速当放松。</div>
-      <div class="row risk"><b>注意</b>曲谱需联网获取，中文曲库偏少。</div>
-      <div class="meta">
-        <span class="star">★ 2.0k</span>
-        <span class="est">估 +30 / 周</span>
-        <span class="score">82.7</span>
+        <span class="score">83.9</span>
       </div>
     </a>
     <a class="card" href="https://github.com/YunYouJun/cook" target="_blank" rel="noopener">
       <div class="card-top">
-        <span class="idx">7</span>
+        <span class="idx">2</span>
         <span class="name">YunYouJun/cook</span>
         
         <span class="tag">生活实用工具</span>
       </div>
-      <div class="row what"><b>是什么</b>一个中文菜谱网站，每道菜带分步图文教程和用料清单</div><div class="row how"><b>怎么用</b>纯网页，浏览器直接打开即可看，无需安装</div><div class="row use"><b>生活场景</b>周末照着菜谱一步步做家常菜，买料清单直接对照着采购</div>
-      <div class="row risk"><b>注意</b>无</div>
+      <div class="row what"><b>是什么</b>一个中文做菜网站/菜谱集，分步骤图文教你做家常菜。</div><div class="row how"><b>怎么用</b>静态网页或本地即可浏览，无需注册服务。</div><div class="row use"><b>生活场景</b>周末照着菜谱一步步做菜，步骤清楚不容易翻车。</div>
+      <div class="row risk"><b>注意</b>内容靠仓库维护，菜品种类有限</div>
       <div class="meta">
         <span class="star">★ 6553</span>
         <span class="est">估 +27 / 周</span>
         <span class="score">82.5</span>
       </div>
     </a>
-    <a class="card" href="https://github.com/team-spotube/spotube" target="_blank" rel="noopener">
+    <a class="card" href="https://github.com/ayangweb/BongoCat" target="_blank" rel="noopener">
       <div class="card-top">
-        <span class="idx">8</span>
-        <span class="name">team-spotube/spotube</span>
-        <span class="badge new">新上榜</span>
+        <span class="idx">3</span>
+        <span class="name">ayangweb/BongoCat</span>
+        
         <span class="tag">纯娱乐休闲</span>
       </div>
-      <div class="row what"><b>是什么</b>开源音乐流媒体播放器，桌面和手机都能听歌。</div><div class="row how"><b>怎么用</b>装客户端登录后即可播放，无需自建服务器。</div><div class="row use"><b>生活场景</b>通勤路上或晚上在家用手机听歌单，替代商业音乐 App。</div>
-      <div class="row risk"><b>注意</b>部分音源依赖第三方服务，地区可用性不稳定。</div>
+      <div class="row what"><b>是什么</b>一只跟着敲键盘的桌面猫，跨平台桌面宠物</div><div class="row how"><b>怎么用</b>下载安装后常驻桌面，鼠标互动</div><div class="row use"><b>生活场景</b>工作时桌面上有只猫跟着敲键盘，摸鱼时逗两下</div>
+      <div class="row risk"><b>注意</b>几乎无，纯趣味小工具</div>
       <div class="meta">
-        <span class="star">★ 5.1k</span>
-        <span class="est">估 +169 / 周</span>
+        <span class="star">★ 2.5k</span>
+        <span class="est">估 +285 / 周</span>
         <span class="score">80.8</span>
       </div>
     </a>
-    <a class="card" href="https://github.com/DuarteSantos8/openGym" target="_blank" rel="noopener">
+    <a class="card" href="https://github.com/open-ani/animeko" target="_blank" rel="noopener">
       <div class="card-top">
-        <span class="idx">9</span>
-        <span class="name">DuarteSantos8/openGym</span>
+        <span class="idx">4</span>
+        <span class="name">open-ani/animeko</span>
+        
+        <span class="tag">纯娱乐休闲</span>
+      </div>
+      <div class="row what"><b>是什么</b>一站式追番平台，找番、追番、看番带弹幕</div><div class="row how"><b>怎么用</b>Android 装 App，支持离线缓存和 Bangumi 同步</div><div class="row use"><b>生活场景</b>晚上窝沙发用平板追新番，弹幕可以过滤掉剧透</div>
+      <div class="row risk"><b>注意</b>需自行找番源，部分功能依赖网络</div>
+      <div class="meta">
+        <span class="star">★ 2.2k</span>
+        <span class="est">估 +98 / 周</span>
+        <span class="score">80.8</span>
+      </div>
+    </a>
+    <a class="card" href="https://github.com/ppy/osu" target="_blank" rel="noopener">
+      <div class="card-top">
+        <span class="idx">5</span>
+        <span class="name">ppy/osu</span>
+        
+        <span class="tag">纯娱乐休闲</span>
+      </div>
+      <div class="row what"><b>是什么</b>开源音乐节奏游戏 osu!，点圈圈打节拍</div><div class="row how"><b>怎么用</b>下载安装桌面客户端即玩，曲库需自行下载</div><div class="row use"><b>生活场景</b>周末在家戴上耳机打几首歌，练手速也解压</div>
+      <div class="row risk"><b>注意</b>上手需适应节奏，曲包要自己找</div>
+      <div class="meta">
+        <span class="star">★ 2.0k</span>
+        <span class="est">估 +30 / 周</span>
+        <span class="score">80.8</span>
+      </div>
+    </a>
+    <a class="card" href="https://github.com/liketrek/TREK" target="_blank" rel="noopener">
+      <div class="card-top">
+        <span class="idx">6</span>
+        <span class="name">liketrek/TREK</span>
         
         <span class="tag">生活实用工具</span>
       </div>
-      <div class="row what"><b>是什么</b>开源健身与自重训练记录 App，规划训练动作并统计各肌群训练量。</div><div class="row how"><b>怎么用</b>有 iPhone、Apple Watch 和 Android 安装包，装手机上离线记录。</div><div class="row use"><b>生活场景</b>下班后练一组自重动作，记下重量和次数，看这周练了哪块肌肉。</div>
-      <div class="row risk"><b>注意</b>界面以英文为主。</div>
+      <div class="row what"><b>是什么</b>开源旅行规划工具，管行程、预订、预算、行李清单和游记</div><div class="row how"><b>怎么用</b>需Docker自建服务，浏览器和PWA访问，支持离线</div><div class="row use"><b>生活场景</b>规划全家出游，把机票酒店预算行李清单放一处</div>
+      <div class="row risk"><b>注意</b>需自建服务，中文支持一般</div>
       <div class="meta">
-        <span class="star">★ 2.4k</span>
-        <span class="est">估 +1296 / 周</span>
+        <span class="star">★ 1.6k</span>
+        <span class="est">估 +441 / 周</span>
         <span class="score">80.8</span>
+      </div>
+    </a>
+    <a class="card" href="https://github.com/ComicSparks/pikapika" target="_blank" rel="noopener">
+      <div class="card-top">
+        <span class="idx">7</span>
+        <span class="name">ComicSparks/pikapika</span>
+        <span class="badge new">新上榜</span>
+        <span class="tag">纯娱乐休闲</span>
+      </div>
+      <div class="row what"><b>是什么</b>哔咔漫画的第三方全平台客户端，支持安卓/iOS/Mac/Windows/Linux看漫画</div><div class="row how"><b>怎么用</b>下载对应平台安装包直接装，登录账号后浏览书架，纯本地客户端联网取内容</div><div class="row use"><b>生活场景</b>睡前靠在床上翻几话漫画，通勤地铁里离线看存好的章节</div>
+      <div class="row risk"><b>注意</b>内容源依赖第三方站点，能否正常访问取决于网络和站点状态</div>
+      <div class="meta">
+        <span class="star">★ 8464</span>
+        <span class="est">估 +30 / 周</span>
+        <span class="score">80.3</span>
+      </div>
+    </a>
+    <a class="card" href="https://github.com/simonoppowa/OpenNutriTracker" target="_blank" rel="noopener">
+      <div class="card-top">
+        <span class="idx">8</span>
+        <span class="name">simonoppowa/OpenNutriTracker</span>
+        <span class="badge new">新上榜</span>
+        <span class="tag">生活实用工具</span>
+      </div>
+      <div class="row what"><b>是什么</b>简洁重隐私的开源卡路里与饮食记录 App</div><div class="row how"><b>怎么用</b>安卓安装使用，本地存储数据，可扫码录入食品</div><div class="row use"><b>生活场景</b>每天记自己吃了什么、多少热量，看一周摄入趋势</div>
+      <div class="row risk"><b>注意</b>食品库偏欧美，中文食物条目录入要手动</div>
+      <div class="meta">
+        <span class="star">★ 3055</span>
+        <span class="est">估 +13 / 周</span>
+        <span class="score">80.1</span>
+      </div>
+    </a>
+    <a class="card" href="https://github.com/LorisYounger/VPet" target="_blank" rel="noopener">
+      <div class="card-top">
+        <span class="idx">9</span>
+        <span class="name">LorisYounger/VPet</span>
+        
+        <span class="tag">纯娱乐休闲</span>
+      </div>
+      <div class="row what"><b>是什么</b>开源虚拟桌宠，一个会动会互动的小人常驻在电脑桌面上</div><div class="row how"><b>怎么用</b>下载 Windows 程序直接运行，可养成、喂食、互动，纯本地</div><div class="row use"><b>生活场景</b>工作时屏幕角落养个小宠物，闲下来点两下逗它玩</div>
+      <div class="row risk"><b>注意</b>主要支持 Windows，功能偏轻量</div>
+      <div class="meta">
+        <span class="star">★ 7313</span>
+        <span class="est">估 +35 / 周</span>
+        <span class="score">79.8</span>
       </div>
     </a></section>
 
   <div class="picks">
     <div class="label" style="font-size:12px;color:#6b7280;letter-spacing:1px;margin-bottom:8px;">本周动手建议</div>
     <ol><li><b>[办公]</b>
-        <a href="https://github.com/langbot-app/LangBot" target="_blank" rel="noopener">langbot-app/LangBot</a>
-        <span class="pk-what">生产级多平台 IM 机器人开发平台，含 Agent、知识库与插件编排，支持钉钉</span>
-        <span class="pk-use">→ 16 个部门绩效责任书催办、重点任务滞后预警可由钉钉机器人自动发并跟踪回执</span></li><li><b>[办公]</b>
-        <a href="https://github.com/activepieces/activepieces" target="_blank" rel="noopener">activepieces/activepieces</a>
-        <span class="pk-what">开源工作流自动化平台，偏系统间取数搬运和AI Agent编排，内置约400个MCP连接器</span>
-        <span class="pk-use">→ 把重点任务管理的滞后检测、催办发钉钉、结果汇总串成一条无人值守流水线，不用你每天翻表盯人</span></li><li><b>[生活]</b>
+        <a href="https://github.com/DingTalk-Real-AI/dingtalk-workspace-cli" target="_blank" rel="noopener">DingTalk-Real-AI/dingtalk-workspace-cli</a>
+        <span class="pk-what">钉钉官方开源的跨平台 CLI，把钉钉全套产品能力封装成命令行</span>
+        <span class="pk-use">→ 可直接脚本化读取 AI 表格、发群通知、查审批状态，让 16 个部门绩效责任书催办与重点任务滞后预警不用人翻表盯；与他现有 WorkBuddy 脚本链路能直接接</span></li><li><b>[办公]</b>
+        <a href="https://github.com/apache/airflow" target="_blank" rel="noopener">apache/airflow</a>
+        <span class="pk-what">代码定义 DAG 的任务调度平台，偏系统间批量作业编排与运维监控</span>
+        <span class="pk-use">→ 把行情抓取→清洗→入库→出简报、月度运营报告取数这类链路固化成定时 DAG，执行历史可查、失败可重跑，不用再靠脚本裸跑</span></li><li><b>[生活]</b>
         <a href="https://github.com/Anduin2017/HowToCook" target="_blank" rel="noopener">Anduin2017/HowToCook</a>
-        <span class="pk-what">一份中文家常菜菜谱合集，按菜分类给出用料和分步做法。</span>
-        <span class="pk-use">→ 周末照着挑一道菜买料下厨，新手也能按步骤做出家常菜。</span></li></ol>
+        <span class="pk-what">一本程序员写的家常菜谱，按菜系和难度分类的图文做法</span>
+        <span class="pk-use">→ 下班回家照着做一道西红柿炒蛋或红烧肉，按步骤翻着做</span></li></ol>
   </div>
 
   <footer>陈华鑫 · 自动周报｜数据源 GitHub Search API｜分类由 AI 完成后人工抽检</footer>
